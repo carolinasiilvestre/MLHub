@@ -1,3 +1,6 @@
+# TO GRANT OR NOT TO GRANT: DECIDING ON COMPENSATION BENEFITS
+# Group 14
+
 ## Project Overview  
 The New York Workers’ Compensation Board (WCB) plays a crucial role in regulating and adjudicating claims related to workplace injuries, volunteer workers, and other compensation cases. Since 2000, the WCB has handled over 5 million claims, making manual claim reviews an increasingly time-consuming and complex process.  
 
