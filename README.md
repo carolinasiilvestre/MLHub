@@ -10,51 +10,52 @@
   GROUP 14
 </h2>
 
-## Project Overview  
-The New York Workers’ Compensation Board (WCB) plays a crucial role in regulating and adjudicating claims related to workplace injuries, volunteer workers, and other compensation cases. Since 2000, the WCB has handled over 5 million claims, making manual claim reviews an increasingly time-consuming and complex process.  
+## Project Overview
 
-To address this challenge, Nova IMS partnered with the WCB to develop a machine learning solution aimed at automating decision-making for new claims. This project focuses on building, evaluating, and optimizing classification models to predict the type of injury (Claim Injury Type) associated with a claim, enhancing the efficiency and accuracy of the WCB's operations.  
+This repository contains the work of a group project undertaken as part of the Master's program in Data Science and Advanced Analytics at Nova Information Management School (Nova IMS). The project aims to develop a machine learning model to assist the New York Workers' Compensation Board (WCB) in automating decision-making processes for workers’ compensation claims. With over 5 million claims under WCB's jurisdiction, our goal was to predict the "Claim Injury Type" using supervised learning techniques, ultimately achieving optimized model performance.
 
-## Project Goals  
-1. **Multiclass Classification Benchmarking**  
-   - Develop a classification model to accurately predict the injury type for claims based on historical data.  
-   - Use claims data from 2020 to 2022 to train, validate, and test models.  
-   - Establish a robust model assessment strategy to compare multiple candidate models and identify the most generalizable solution.  
+## Objectives
 
-2. **Model Optimization**  
-   - Explore strategies such as hyperparameter tuning, feature selection, and pre-processing adjustments to enhance model performance.  
-   - Compare optimized models against initial benchmarks and document findings.  
+1. **Data Understanding and Preparation**:  
+   - Perform exploratory data analysis to uncover key dataset characteristics.  
+   - Handle missing values, outliers, and imbalances in the data.  
+   - Engineer and select features for robust predictive modeling.
 
-3. **Additional Insights**  
-   - Develop an analytics interface that provides predictions for new claim inputs.  
-   - Explore predicting "Agreement Reached" and examine the potential to improve model performance.  
+2. **Model Development and Comparison**:  
+   - Train and evaluate multiple classification models, including KNN, Support Vector Classifier, Logistic Regression, Decision Trees, Random Forest, Neural Networks, and XGBoost.  
+   - Identify the best-performing model and optimize its parameters for improved accuracy and reliability.  
 
-## Dataset Details  
-This project leverages two datasets provided by the WCB:  
+3. **Open-Ended Exploration**:  
+   - Analyze and predict the variable ‘Agreement Reached’ and assess its potential as an additional feature for enhancing primary model performance.
 
-1. **Training Dataset**  
-   - Contains claims data from January 2020 to December 2022.  
-   - Used to train and validate machine learning models.  
+## Key Findings
 
-2. **Test Dataset**  
-   - Contains claims data from January 2023 onward.  
-   - Used to predict the Claim Injury Type, with model performance evaluated through a Kaggle competition.  
+- **Best Model**: XGBoost achieved the highest Kaggle score of 0.31619 for the prediction of "Claim Injury Type." 
+- **Data Preprocessing**: Robust handling of skewed numerical variables, missing data, and encoding of high-cardinality categorical variables improved the model training process.  
+- **Feature Selection**: Techniques like Lasso and Recursive Feature Selection were essential in mitigating dimensionality issues and computational complexity.  
+- **Open-Ended Analysis**: Predicting ‘Agreement Reached’ with an AUC of 0.8732 using Support Vector Classifier (SVC) demonstrated the potential to enhance the primary prediction model, though improvements depended on the correlation of added features.  
 
-### Evaluation through Kaggle  
-The test dataset's predictions will be submitted to a Kaggle competition, where performance metrics will determine the model's effectiveness. This setup provides a real-world benchmarking environment to assess the generalizability of the developed models.
+## Repository Structure
 
-## Methodology  
-### 1. Data Preprocessing  
-- Handling missing data and outliers.  
-- Feature engineering and selection to enhance model interpretability and performance.  
+- **Notebooks**:  
+  - Exploratory Data Analysis  
+  - Data Preprocessing  
+  - Feature Engineering and Selection  
+  - Model Training and Evaluation  
+  - Open-Ended Analysis for ‘Agreement Reached’  
+- **Reports**: Comprehensive documentation of the methodology, findings, and conclusions.
 
-### 2. Model Development  
-- Implementing multiple classification algorithms (e.g., Decision Trees, Random Forest, Gradient Boosting, Neural Networks).  
-- Evaluating models using metrics such as accuracy, precision, recall, F1-score, and AUC-ROC.  
+## Limitations and Future Work
 
-### 3. Model Optimization  
-- Hyperparameter tuning using grid search.  
-- Comparing optimized models to initial benchmarks.  
+### Limitations:
+- High dimensionality and imbalanced target classes increased computational demands and risks of overfitting.
+- Dependence on dataset quality limited potential for external validations.
 
-### 4. Insights and Advanced Analytics  
-- Performing feature importance analysis to understand key factors driving predictions.
+### Future Work:
+- Address target class imbalances using techniques like SMOTE (Synthetic Minority Oversampling Technique).  
+- Explore ensemble methods (e.g., stacking or blending) to combine model strengths.  
+- Incorporate external data sources such as economic and geographic indicators to enrich feature space.  
+
+## Conclusion
+
+This project demonstrates the effectiveness of machine learning in automating complex decision-making processes in the insurance sector. While the findings align with our expectations, identified limitations and opportunities for improvement point toward the potential for more advanced analyses in the future.
